@@ -1,0 +1,236 @@
+{
+    "VENDOR1": {
+        "id": 1,
+        "width": 8.5,
+        "height": 11,
+        "fields": [
+            {
+                "field_id": 1,
+                "page": 1,
+                "name": "CR Number",
+                "data_type": "string",
+                "keys": [
+                    "CR Number"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "CR Number"}],
+                        ["accepted_chars", ["digit"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 2,
+                "page": 1,
+                "name": "Legal Type",
+                "data_type": "string",
+                "keys": [
+                    "Legal Type"
+                ],
+                "key_type": "no_digit",
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Legal Type"}],
+                        ["accepted_chars", ["alphabet", "space"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 3,
+                "page": 1,
+                "name": "Head Q",
+                "data_type": "string",
+                "keys": [
+                    "Head Q",
+                    "Head (",
+                    "Head O"
+                ],
+                "key_type": "no_digit",
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Head Q"}],
+                        ["accepted_chars", ["alphabet", "space", "/"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 4,
+                "page": 1,
+                "name": "Postal Code",
+                "data_type": "string",
+                "keys": [
+                    "Postal Code"
+                ],
+                "key_type": "upper",
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Postal Code"}],
+                        ["accepted_chars", ["digit"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 5,
+                "page": 1,
+                "name": "Telephone",
+                "data_type": "string",
+                "keys": [
+                    "Telephone"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Telephone"}],
+                        ["accepted_chars", ["digit"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 6,
+                "page": 1,
+                "name": "Cash Capital",
+                "data_type": "currency",
+                "keys": [
+                    "Cash Capital"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Cash Capital"}]
+                    ]
+                ]
+            },
+            {
+                "field_id": 7,
+                "page": 1,
+                "name": "Kind Capital",
+                "data_type": "currency",
+                "keys": [
+                    "Kind Capital"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Kind Capital"}]
+                    ]
+                ]
+            },
+            {
+                "field_id": 8,
+                "page": 1,
+                "name": "Total Capital (Omani Riyal)",
+                "data_type": "currency",
+                "keys": [
+                    "Total Capital (Omani Riyal)"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Total Capital (Omani Riyal)"}]
+                    ]
+                ]
+            },
+            {
+                "field_id": 9,
+                "page": 1,
+                "name": "Establishment Date",
+                "data_type": "date",
+                "keys": [
+                    "Establishment Date"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Establishment Date"}]
+                    ]
+                ]
+            },
+            {
+                "field_id": 10,
+                "page": 1,
+                "name": "Registration Date",
+                "data_type": "date",
+                "keys": [
+                    "Registration Date"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Registration Date"}]
+                    ]
+                ]
+            },
+            {
+                "field_id": 11,
+                "page": 1,
+                "name": "Expiry Date",
+                "data_type": "date",
+                "keys": [
+                    "Expiry Date"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Expiry Date"}]
+                    ]
+                ]
+            },
+            {
+                "field_id": 12,
+                "page": 1,
+                "name": "PO Box",
+                "data_type": "string",
+                "keys": [
+                    "PO Box"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "PO Box"}],
+                        ["accepted_chars", ["digit"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 13,
+                "page": 1,
+                "name": "No of Shares",
+                "data_type": "string",
+                "keys": [
+                    "No. of Shares"
+                ],
+                "key_type": "digit",
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "No of Shares"}],
+                        ["accepted_chars", ["digit"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 14,
+                "page": 1,
+                "name": "Commercial Name",
+                "data_type": "string",
+                "keys": [
+                    "Commercial Name"
+                ],
+                "key_type": "no_digit",
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Commercial Name"}],
+                        ["accepted_chars", ["alphabet", "space"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 15,
+                "page": 1,
+                "name": "Email",
+                "data_type": "string",
+                "keys": [
+                    "Email"
+                ],
+                "key_type": "email",
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Email_temp"}],
+                        ["accepted_chars", ["alphabet", "space"]]
+                    ]
+                ]
+            }
+        ]
+    }
+}

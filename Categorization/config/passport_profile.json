@@ -1,0 +1,262 @@
+{
+    "PASSPORT1": {
+        "id": 1,
+        "width": 8.5,
+        "height": 11,
+        "fields": [
+            {
+                "field_id": 1,
+                "page": 1,
+                "name": "Type",
+                "data_type": "string",
+                "keys": [
+                    "Type"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "above_text", "text": "Type"}],
+                        ["accepted_chars", ["alphabet"]],
+                        ["accepted_lengths", [1]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 2,
+                "page": 1,
+                "name": "State",
+                "data_type": "string",
+                "keys": [
+                    "State"
+                ],
+                "key_type": "upper",
+                "hints": [
+                    [
+                        ["proximity", {"type": "above_text", "text": "State"}],
+                        ["accepted_chars", ["alphabet"]],
+                        ["accepted_lengths", [1]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 3,
+                "page": 1,
+                "name": "Passport Number",
+                "data_type": "string",
+                "keys": [
+                    "Passport No"
+                ],
+                "key_type": "digit",
+                "hints": [
+                    [
+                        ["proximity", {"type": "above_text", "text": "Passport No"}],
+                        ["accepted_chars", ["digit", "alphabet"]],
+                        ["accepted_lengths", [8]]
+                    ],
+                    [
+                        ["proximity", {"type": "above_text", "text": "Passpotho"}],
+                        ["accepted_chars", ["digit", "alphabet"]],
+                        ["accepted_lengths", [8]]
+                    ],
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Passport No"}],
+                        ["accepted_chars", ["digit"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 4,
+                "page": 1,
+                "name": "Surname",
+                "data_type": "string",
+                "keys": [
+                    "Surname"
+                ],
+                "key_type": "upper",
+                "hints": [
+                    [
+                        ["proximity", {"type": "above_tex", "text": "Surname"}],
+                        ["accepted_chars", ["alphabet"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 5,
+                "page": 1,
+                "name": "Family Name",
+                "data_type": "string",
+                "keys": [
+                    "Family Name"
+                ],
+                "key_type": "upper",
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Family Name"}],
+                        ["accepted_chars", ["alphabet"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 6,
+                "page": 1,
+                "name": "Given Name",
+                "data_type": "string",
+                "keys": [
+                    "Given Names"
+                ],
+                "key_type": "upper",
+                "hints": [
+                    [
+                        ["proximity", {"type": "above_text", "text": "Given Name"}],
+                        ["accepted_chars", ["alphabet"]]
+                    ],
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Given Names"}],
+                        ["accepted_chars", ["alphabet"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 7,
+                "page": 1,
+                "name": "Sex",
+                "data_type": "string",
+                "keys": [
+                    "Sex"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "above_text", "text": "Sex"}],
+                        ["accepted_chars", ["alphabet"]],
+                        ["accepted_lengths", [1]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 8,
+                "page": 1,
+                "name": "Place of Birth",
+                "data_type": "string",
+                "keys": [
+                    "Place of Birth"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "above_text", "text": "Place of Birth"}],
+                        ["accepted_chars", ["alphabet", "space", ","]]
+                    ],
+                    [
+                        ["proximity", {"type": "above_text", "text": "Place of Birth"}],
+                        ["accepted_chars", ["alphabet"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 9,
+                "page": 1,
+                "name": "Date of Birth",
+                "data_type": "date",
+                "keys": [
+                    "Date of Birth"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Date of Birth"}]
+                    ],
+                    [
+                        ["proximity", {"type": "above_text", "text": "Date of Birth"}]
+                    ],
+                    [
+                        ["proximity", {"type": "above_text", "text": "cate of Birth"}]
+                    ]
+                ]
+            },
+            {
+                "field_id": 10,
+                "page": 1,
+                "name": "Date of Expire",
+                "data_type": "date",
+                "keys": [
+                    "Date of Expiry"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Date of Expiry"}]
+                    ],
+                    [
+                        ["proximity", {"type": "above_text", "text": "Date of Expiry"}]
+                    ]
+                ]
+            },
+            {
+                "field_id": 11,
+                "page": 1,
+                "name": "Date of Issue",
+                "data_type": "date",
+                "keys": [
+                    "Date of Issue"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "same_line_prefix", "text": "Date of Issue"}]
+                    ],
+                    [
+                        ["proximity", {"type": "above_text", "text": "Date of Issue"}]
+                    ],
+                    [
+                        ["proximity", {"type": "above_text", "text": "Date of life"}]
+                    ]
+                ]
+            },
+            {
+                "field_id": 12,
+                "page": 1,
+                "name": "Issuing Authority",
+                "data_type": "string",
+                "keys": [
+                    "Issuing Authority"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "above_text", "text": "Issuing Authority"}],
+                        ["accepted_chars", ["alphabet"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 13,
+                "page": 1,
+                "name": "Nationality",
+                "data_type": "string",
+                "keys": [
+                    "Nationality"
+                ],
+                "key_type": "upper",
+                "hints": [
+                    [
+                        ["proximity", {"type": "above_text", "text": "Nationality"}],
+                        ["accepted_chars", ["upper"]]
+                    ]
+                ]
+            },
+            {
+                "field_id": 8,
+                "page": 1,
+                "name": "Place of Issue",
+                "data_type": "string",
+                "keys": [
+                    "Place of Issue"
+                ],
+                "hints": [
+                    [
+                        ["proximity", {"type": "above_text", "text": "Place of Issue"}],
+                        ["accepted_chars", ["alphabet", "space", ","]]
+                    ],
+                    [
+                        ["proximity", {"type": "above_text", "text": "Place of Issue"}],
+                        ["accepted_chars", ["alphabet"]]
+                    ]
+                ]
+            }
+        ]
+    }
+}
