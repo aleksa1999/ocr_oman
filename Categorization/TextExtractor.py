@@ -90,6 +90,22 @@ class TextExtractor:
                     elif ocr_text_lines[i + 9] == "Legal Type" and ocr_text_lines[i + 1].isdigit():
                         raw_text = ocr_text_lines[i + 4]
 
+                elif sub_key == 'Surname' and ocr_text_lines[i].__contains__('Surname'):
+                    if ocr_text_lines[i+1].__contains__('Title') and ocr_text_lines[i+4].__contains__('Given Names'):
+                        raw_text = ocr_text_lines[i + 2]
+                        key_sub_type = 'no_digit'
+                    elif ocr_text_lines[i + 3].__contains__('Given'):
+                        raw_text = ocr_text_lines[i + 1]
+                        key_sub_type = 'no_digit'
+
+                elif sub_key == 'Given Names' and ocr_text_lines[i].__contains__('Given'):
+                    if ocr_text_lines[i + 3] == 'Nationality':
+                        raw_text = ocr_text_lines[i + 1]
+                        key_sub_type = 'no_digit'
+                    elif ocr_text_lines[i + 5].__contains__('Nationality'):
+                        raw_text = ocr_text_lines[i + 1]
+                        key_sub_type = 'no_digit'
+
                 elif sub_key == ocr_text_lines[i]:
                     if i < len(ocr_text_lines):
                         if ocr_rect_lines[i][1] > ocr_rect_lines[i + 1][1] + 10:

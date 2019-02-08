@@ -8,7 +8,7 @@ import os
 if len(sys.argv) >= 2:
     src_name = sys.argv[1]
 else:
-    src_name = 'sample_passport/2.jpg'
+    src_name = 'sample_passport/4.jpg'
 
 class_passport = VendorExtractor('passport')
 class_func = FuncMl()
@@ -30,7 +30,7 @@ str_path = os.path.split(src_name)
 data = [['Name', 'Value']]
 
 for key in sorted(ret_parse.iterkeys()):
-    # print "%s: %s" % (key, ret_parse[key])
+    print "%s: %s" % (key, ret_parse[key])
 
     if ret_parse[key] is None:
         value = ''

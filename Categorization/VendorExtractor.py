@@ -106,6 +106,9 @@ class VendorExtractor:
             else:
                 ocr_json = self.class_func.get_json_google_from_jpg(img_list[0])
 
+        for temp_file in temp_list:
+            self.class_func.rm_file(temp_file)
+
         result = []
 
         if ocr_json is None:
@@ -180,8 +183,5 @@ class VendorExtractor:
 
         ret_personal = ret_personal.replace('<', '')
         result.append({'field_name': 'Personal Number', 'value': ret_personal})
-
-        for temp_file in temp_list:
-            self.class_func.rm_file(temp_file)
 
         return result
