@@ -33,7 +33,17 @@
                     [
                         ["proximity", {"type": "above_text", "text": "State"}],
                         ["accepted_chars", ["alphabet"]],
-                        ["accepted_lengths", [1]]
+                        ["accepted_lengths", [3]]
+                    ],
+                    [
+                        ["proximity", {"type": "above_text", "text": "S tate"}],
+                        ["accepted_chars", ["alphabet"]],
+                        ["accepted_lengths", [3]]
+                    ],
+                    [
+                        ["proximity", {"type": "above_text", "text": "Stata"}],
+                        ["accepted_chars", ["alphabet"]],
+                        ["accepted_lengths", [3]]
                     ]
                 ]
             },
@@ -50,7 +60,7 @@
                     [
                         ["proximity", {"type": "above_text", "text": "Passport No"}],
                         ["accepted_chars", ["digit", "alphabet"]],
-                        ["accepted_lengths", [8]]
+                        ["accepted_lengths", [8, 9]]
                     ],
                     [
                         ["proximity", {"type": "above_text", "text": "Passpotho"}],
@@ -218,6 +228,10 @@
                 "hints": [
                     [
                         ["proximity", {"type": "above_text", "text": "Issuing Authority"}],
+                        ["accepted_chars", ["alphabet", "-"]]
+                    ],
+                    [
+                        ["proximity", {"type": "above_text", "text": "Issuing Authority"}],
                         ["accepted_chars", ["alphabet"]]
                     ]
                 ]
@@ -239,7 +253,7 @@
                 ]
             },
             {
-                "field_id": 8,
+                "field_id": 14,
                 "page": 1,
                 "name": "Place of Issue",
                 "data_type": "string",

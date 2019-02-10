@@ -106,7 +106,12 @@ class TextExtractor:
                         raw_text = ocr_text_lines[i + 1]
                         key_sub_type = 'no_digit'
 
-                elif sub_key == ocr_text_lines[i]:
+                if raw_text != '':
+                    result = self.find_match_text(raw_text.strip(), key_type, key_sub_type, self.country)
+                    if result:
+                        return result[0]
+
+                if sub_key == ocr_text_lines[i]:
                     if i < len(ocr_text_lines):
                         if ocr_rect_lines[i][1] > ocr_rect_lines[i + 1][1] + 10:
                             continue

@@ -289,6 +289,7 @@ class Proximity:
 
             if f_match:
                 text_item = ocr_json[i]['description']
+                text_item_prev = ocr_json[max(i - 1, 0)]['description']
                 rect = ocr_json[i]['boundingPoly']['vertices']
 
                 x1 = self.class_func.get_field_int(rect[0], 'x')
@@ -303,11 +304,13 @@ class Proximity:
 
                 rect_prev = rect
 
-                if abs(x1 - x2) < rate_x / 2.5 and abs(y1 - y2) < rate_y / 30:
+                if abs(x1 - x2) < rate_x / 5 and abs(y1 - y2) < rate_y / 30:
                     if text_item == '/' or (len(new_text) > 0 and new_text[-1] == '/'):
                         new_text += text_item
                     elif text_item == '-' or (len(new_text) > 0 and new_text[-1] == '-'):
                         new_text += text_item
+                    elif text_item == '.' and len(text_item_prev) == 1 and text_item_prev.isupper():     # ignore "P ."
+                        continue
                     elif text_item == '.' or (len(new_text) > 0 and new_text[-1] == '.'):
                         new_text += text_item
                     elif text_item == ',' or (len(new_text) > 0 and new_text[-1] == ','):

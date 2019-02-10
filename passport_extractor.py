@@ -8,15 +8,15 @@ import os
 if len(sys.argv) >= 2:
     src_name = sys.argv[1]
 else:
-    src_name = 'sample_passport/4.jpg'
+    src_name = 'sample_passport/IMG_0301.jpg'
 
 class_passport = VendorExtractor('passport')
 class_func = FuncMl()
 
 ret = class_passport.extract_MRP(src_name)
 if not ret:
-    ret = class_passport.extract(src_name)
-    # ret = class_passport.extract(src_name, 3)
+    # ret = class_passport.extract(src_name)
+    ret = class_passport.extract(src_name, 9)
 
 ret_parse = {}
 for i in range(len(ret)):
