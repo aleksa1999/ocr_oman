@@ -30,7 +30,7 @@ str_path = os.path.split(src_name)
 data = [['Name', 'Value']]
 
 for key in sorted(ret_parse.iterkeys()):
-    print "%s: %s" % (key, ret_parse[key])
+    # print "%s: %s" % (key, ret_parse[key])
 
     if ret_parse[key] is None:
         value = ''
