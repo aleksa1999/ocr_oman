@@ -15,8 +15,8 @@ class_func = FuncMl()
 
 ret = class_passport.extract_MRP(src_name)
 if not ret:
-    # ret = class_passport.extract(src_name)
-    ret = class_passport.extract(src_name, 9)
+    ret = class_passport.extract(src_name)
+    # ret = class_passport.extract(src_name, 9)
 
 ret_parse = {}
 for i in range(len(ret)):
