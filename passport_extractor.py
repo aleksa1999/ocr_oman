@@ -8,7 +8,7 @@ import os
 if len(sys.argv) >= 2:
     src_name = sys.argv[1]
 else:
-    src_name = 'sample_passport/IMG_0301.jpg'
+    src_name = 'sample_passport/p2.jpg'
 
 class_passport = VendorExtractor('passport')
 class_func = FuncMl()
@@ -22,7 +22,8 @@ ret_parse = {}
 for i in range(len(ret)):
     ret_parse[ret[i]['field_name']] = ret[i]['value']
 
-# print json.dumps(ret_parse, indent=4)
+if ret_parse['Date of Birth'] == ret_parse['Date of Issue']:
+    ret_parse['Date of Birth'] = None
 
 # --------------- Save and Display Result -------------------
 str_path = os.path.split(src_name)

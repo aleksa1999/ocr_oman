@@ -177,6 +177,9 @@
                     ],
                     [
                         ["proximity", {"type": "above_text", "text": "cate of Birth"}]
+                    ],
+                    [
+                        ["proximity", {"type": "above_text", "text": "fate of Birth"}]
                     ]
                 ]
             },

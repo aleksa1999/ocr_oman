@@ -94,6 +94,9 @@ class TextExtractor:
                     if ocr_text_lines[i+1].__contains__('Title') and ocr_text_lines[i+4].__contains__('Given Names'):
                         raw_text = ocr_text_lines[i + 2]
                         key_sub_type = 'no_digit'
+                    elif ocr_text_lines[i+2].__contains__('Title') and ocr_text_lines[i+4].__contains__('Given Names'):
+                        raw_text = ocr_text_lines[i + 1]
+                        key_sub_type = 'no_digit'
                     elif ocr_text_lines[i + 3].__contains__('Given'):
                         raw_text = ocr_text_lines[i + 1]
                         key_sub_type = 'no_digit'
@@ -102,7 +105,13 @@ class TextExtractor:
                     if ocr_text_lines[i + 3] == 'Nationality':
                         raw_text = ocr_text_lines[i + 1]
                         key_sub_type = 'no_digit'
+                    elif ocr_text_lines[i + 4].__contains__('Nationality'):
+                        raw_text = ocr_text_lines[i + 2] + ' ' + ocr_text_lines[i + 1]
+                        key_sub_type = 'no_digit'
                     elif ocr_text_lines[i + 5].__contains__('Nationality'):
+                        raw_text = ocr_text_lines[i + 1]
+                        key_sub_type = 'no_digit'
+                    elif ocr_text_lines[i + 7].__contains__('Nationality') and ocr_text_lines[i + 3].__contains__('ID'):
                         raw_text = ocr_text_lines[i + 1]
                         key_sub_type = 'no_digit'
 
